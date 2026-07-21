@@ -1,3 +1,7 @@
+# =====================================
+# Job Market Analytics - Requirements
+# =====================================
+
 # Data manipulation
 pandas==2.3.1
 numpy==2.3.2
@@ -9,15 +13,15 @@ psycopg2-binary==2.9.10
 # Environment variables
 python-dotenv==1.1.1
 
-# Jupyter
+# Jupyter Notebook
 notebook==7.4.5
 ipykernel==6.30.1
 
-# Visualization (EDA)
+# Data Visualization
 matplotlib==3.10.5
 
-# Excel support
+# Excel Support
 openpyxl==3.1.5
 
-# Progress bar
+# Progress Bar
 tqdm==4.67.1
