@@ -3,13 +3,11 @@ from transform import transform_data
 from load import load_data
 from warehouse import run_sql_file
 
-INPUT_FILE = "data/job_market_analytics.csv"
-
 
 def main():
 
     print("Extracting data...")
-    df = extract_data(INPUT_FILE)
+    df = extract_data()
 
     print("Transforming data...")
     df = transform_data(df)

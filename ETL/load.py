@@ -1,6 +1,7 @@
 import os
 from dotenv import load_dotenv
 from sqlalchemy import create_engine, text
+import psycopg2
 
 load_dotenv()
 
@@ -28,9 +29,10 @@ def load_data(df):
         conn.execute(text("TRUNCATE TABLE jobs RESTART IDENTITY;"))
 
     # Load new data
-    df.to_sql(
+    with engine.begin() as conn:
+      df.to_sql(
         name="jobs",
-        con=engine,
+        con=conn,
         if_exists="append",
         index=False
     )
