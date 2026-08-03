@@ -1,5 +1,5 @@
 pandas==2.2.3
-sqlalchemy==1.4.54
+SQLAlchemy==1.4.54
 psycopg2-binary==2.9.10
 python-dotenv==1.1.1
 minio==7.2.16

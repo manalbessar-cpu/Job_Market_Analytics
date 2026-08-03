@@ -1,7 +1,7 @@
-from extract import extract_data
-from transform import transform_data
-from load import load_data
-from warehouse import run_sql_file
+from ETL.extract import extract_data
+from ETL.transform import transform_data
+from ETL.load import load_data
+from ETL.warehouse import run_sql_file
 
 
 def main():

@@ -1,40 +1,27 @@
 import os
 from dotenv import load_dotenv
 from sqlalchemy import create_engine, text
-import psycopg2
 
 load_dotenv()
 
-DB_HOST = os.getenv("DB_HOST")
-DB_PORT = os.getenv("DB_PORT")
-DB_NAME = os.getenv("DB_NAME")
-DB_USER = os.getenv("DB_USER")
-DB_PASSWORD = os.getenv("DB_PASSWORD")
-
 DATABASE_URL = (
-    f"postgresql+psycopg2://{DB_USER}:{DB_PASSWORD}@"
-    f"{DB_HOST}:{DB_PORT}/{DB_NAME}"
+    f"postgresql+psycopg2://{os.getenv('DB_USER')}:{os.getenv('DB_PASSWORD')}"
+    f"@{os.getenv('DB_HOST')}:{os.getenv('DB_PORT')}/{os.getenv('DB_NAME')}"
 )
 
 engine = create_engine(DATABASE_URL)
 
 
 def load_data(df):
-    """
-    Load cleaned data into the staging table (jobs).
-    """
-
-    # Empty the staging table
     with engine.begin() as conn:
         conn.execute(text("TRUNCATE TABLE jobs RESTART IDENTITY;"))
 
-    # Load new data
-    with engine.begin() as conn:
-      df.to_sql(
+    df.to_sql(
         name="jobs",
-        con=conn,
+        con=engine,
         if_exists="append",
-        index=False
+        index=False,
+        method="multi",
     )
 
-    print("✅ Data loaded successfully into 'jobs' table.")
+    print("✅ Data loaded successfully into jobs.")

@@ -11,19 +11,21 @@ DATABASE_URL = (
 
 engine = create_engine(DATABASE_URL)
 
+# Project root (Job_Market_Analytics)
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 
 def run_sql_file(file_path):
-    with open(file_path, "r", encoding="utf-8") as file:
+    sql_path = os.path.join(BASE_DIR, file_path)
+
+    with open(sql_path, "r", encoding="utf-8") as file:
         sql = file.read()
 
     with engine.begin() as conn:
-        # كنقسم الملف على ; باش يقدر يشغل أكثر من Query
-        statements = sql.split(";")
-
-        for statement in statements:
+        for statement in sql.split(";"):
             statement = statement.strip()
 
             if statement:
                 conn.execute(text(statement))
 
-    print(f"✅ Executed: {file_path}")
+    print(f"✅ Executed: {sql_path}")

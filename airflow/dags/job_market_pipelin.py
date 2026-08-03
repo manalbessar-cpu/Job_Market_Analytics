@@ -21,7 +21,7 @@ with DAG(
 
     etl_pipeline = BashOperator(
         task_id="etl_pipeline",
-        bash_command="cd /opt/airflow/project && python ETL/main.py",
+        bash_command="cd /opt/airflow/project && python -m ETL.main",
     )
 
     export_gold = BashOperator(
