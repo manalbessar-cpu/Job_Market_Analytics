@@ -1,29 +1,40 @@
-📊 Job Market Analytics
-📖 Overview
+# 📊 Job Market Analytics
 
-Job Market Analytics is an end-to-end Data Engineering and Business Intelligence project designed to analyze job market trends through an automated ETL pipeline and interactive Power BI dashboards.
+> End-to-End Data Engineering & Business Intelligence Project
 
-The project covers the complete data lifecycle, from data extraction and transformation to data warehousing and business visualization.
+## 📖 Overview
 
-🎯 Project Objectives
-Collect job market data.
-Clean and transform data using Python.
-Build an automated ETL pipeline.
-Store data in a Data Lake (MinIO).
-Design a PostgreSQL Data Warehouse.
-Implement a Star Schema.
-Create interactive Power BI dashboards.
-Support business decision-making with data-driven insights.
-🏗️ Project Architecture
+Job Market Analytics is an end-to-end Data Engineering and Business Intelligence project that analyzes job market data through an automated ETL pipeline and an interactive Power BI dashboard.
+
+The project covers the complete data lifecycle, from data extraction and transformation to data warehousing and visualization, following a modern Medallion Architecture and a Star Schema model.
+
+---
+
+## 🎯 Project Objectives
+
+- Collect and centralize job market data.
+- Clean and transform data using Python.
+- Build an automated ETL pipeline.
+- Store data in a MinIO Data Lake.
+- Design a PostgreSQL Data Warehouse.
+- Implement a Star Schema.
+- Create interactive Power BI dashboards.
+- Support data-driven decision making.
+
+---
+
+## 🏗️ Architecture
+
+```text
 Source Dataset
       │
       ▼
 Python ETL
       │
       ▼
-PostgreSQL Staging
+PostgreSQL (Staging)
       │
-      ├────────► MinIO
+      ├────────► MinIO Data Lake
       │          Bronze
       │          Silver
       │          Gold
@@ -32,58 +43,135 @@ PostgreSQL Data Warehouse
       │
       ▼
 Power BI Dashboard
-🗄️ Data Warehouse
-Fact Table
-fact_jobs
-Dimension Tables
-dim_company
-dim_job
-dim_location
-dim_date
-🛠️ Technologies
-Python
-Pandas
-NumPy
-PostgreSQL
-SQLAlchemy
-SQL
-MinIO
-Docker
-Apache Airflow
-Power BI
-Git & GitHub
-📊 Dashboard
+```
 
-The Power BI dashboard contains three pages.
+---
 
-1️⃣ Executive Dashboard
-Global KPIs
-Countries
-Cities
-Hiring Trends
-Remote Jobs
-2️⃣ Job Market Analysis
-Skills
-Job Titles
-Salary
-Experience
-Employment Types
-3️⃣ Company Analysis
-Companies
-Industries
-Company Size
-Hiring Locations
-🚀 Features
-Automated ETL Pipeline
-Medallion Architecture
-PostgreSQL Data Warehouse
-Star Schema
-Interactive Dashboard
-Cross-page Filters
-Navigation Buttons
+## ⭐ Data Warehouse Model
 
-👩‍💻 Author
+The project uses a **Star Schema**.
 
-Manal Bessar
+### Fact Table
+
+- fact_jobs
+
+### Dimension Tables
+
+- dim_company
+- dim_job
+- dim_location
+- dim_date
+
+---
+
+## 🛠️ Technologies
+
+- Python
+- Pandas
+- NumPy
+- PostgreSQL
+- SQLAlchemy
+- MinIO
+- Docker
+- Apache Airflow
+- Power BI
+- Git & GitHub
+
+---
+
+# 📊 Dashboard Preview
+
+## 🏠 Dashboard Overview
+
+![Dashboard Overview](dashboard/Job%20Market%20Overview.png)
+
+---
+
+## 📈 Job Market Analysis
+
+![Job Market Analysis](dashboard/job%20market%20analysis.png)
+
+---
+
+## 🏢 Company Analysis
+
+![Company Analysis](dashboard/Analyse%20des%20entreprises.png)
+
+---
+
+## 📄 Dashboard Documentation
+
+![Documentation](dashboard/documentation.png)
+
+---
+
+# 📈 Dashboard Features
+
+### Dashboard Overview
+
+- Total Jobs
+- Average Salary
+- Total Applicants
+- Total Views
+- Remote Jobs
+- Jobs by Country
+- Jobs by City
+
+---
+
+### Job Market Analysis
+
+- Top Job Titles
+- Top Skills
+- Jobs by Region
+- Salary Analysis
+- Experience Level
+- Employment Types
+
+---
+
+### Company Analysis
+
+- Top Hiring Companies
+- Industry Distribution
+- Company Size
+- Salary by Company
+- Hiring Locations
+
+---
+
+## 🚀 Project Highlights
+
+- End-to-End ETL Pipeline
+- Medallion Architecture (Bronze, Silver, Gold)
+- PostgreSQL Data Warehouse
+- Star Schema Modeling
+- Interactive Power BI Dashboard
+- Automated Workflow with Apache Airflow
+- Cross-page Filters
+- Dashboard Navigation
+
+---
+
+## 💡 Business Value
+
+The dashboard helps users:
+
+- Analyze job market trends.
+- Identify in-demand skills.
+- Compare salaries.
+- Explore hiring companies.
+- Analyze geographic distribution.
+- Support business decision-making.
+
+---
+
+## 👩‍💻 Author
+
+**Manal Bessar**
 
 Junior Data Analyst
+
+LinkedIn: *(Add your profile link)*
+
+GitHub: https://github.com/manalbessar-cpu
