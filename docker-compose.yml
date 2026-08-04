@@ -55,7 +55,7 @@ services:
       AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://postgres:2004@postgres:5432/airflow_db
       AIRFLOW__CORE__LOAD_EXAMPLES: "False"
       AIRFLOW_UID: ${AIRFLOW_UID}
-
+      AIRFLOW__WEBSERVER__SECRET_KEY: "job-market-airflow-secret-key-2026"
     user: "${AIRFLOW_UID}:0"
 
     volumes:
@@ -92,7 +92,7 @@ services:
       AIRFLOW__CORE__EXECUTOR: LocalExecutor
       AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://postgres:2004@postgres:5432/airflow_db
       AIRFLOW__CORE__LOAD_EXAMPLES: "False"
-
+      AIRFLOW__WEBSERVER__SECRET_KEY: "job-market-airflow-secret-key-2026"
     ports:
       - "8080:8080"
 
@@ -120,7 +120,7 @@ services:
       AIRFLOW__CORE__EXECUTOR: LocalExecutor
       AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://postgres:2004@postgres:5432/airflow_db
       AIRFLOW__CORE__LOAD_EXAMPLES: "False"
-
+      AIRFLOW__WEBSERVER__SECRET_KEY: "job-market-airflow-secret-key-2026"
     command: scheduler
 
     volumes:
