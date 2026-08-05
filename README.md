@@ -168,6 +168,6 @@ The dashboard helps users:
 
 Junior Data Analyst
 
-LinkedIn: *(Add your profile link)*
+LinkedIn: https://www.linkedin.com/in/manal-bessar-71398a3b9/
 
 GitHub: https://github.com/manalbessar-cpu
