@@ -83,25 +83,21 @@ The project uses a **Star Schema**.
 
 ## 🏠 Dashboard Overview
 
-![Dashboard Overview](dashboard/Job%20Market%20Overview.png)
+## 🏠 Dashboard Overview
+
+![Dashboard Overview](dashboard/Job_Market_Overview.png)
 
 ---
 
 ## 📈 Job Market Analysis
 
-![Job Market Analysis](dashboard/job%20market%20analysis.png)
+![Job Market Analysis](dashboard/job_market_analysis.png)
 
 ---
 
 ## 🏢 Company Analysis
 
-![Company Analysis](dashboard/Analyse%20des%20entreprises.png)
-
----
-
-## 📄 Dashboard Documentation
-
-![Documentation](dashboard/documentation.png)
+![Company Analysis](dashboard/Analyse_des_entreprises.png)
 
 ---
 
